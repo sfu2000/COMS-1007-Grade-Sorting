@@ -23,7 +23,7 @@ contentFloat = [[float(x) for x in y] for y in content]
 finalGradeList = [int((contentFloat[x][0]+contentFloat[x][1]+2*contentFloat[x][2])/400*100) for x in range(len(contentFloat))]
 midtermGradeList = sorted([int(contentFloat[x][2]) for x in range(len(contentFloat))], reverse=True)
 
-print("Final Grade Plot")
+print("Total Grade To Date Plot")
 printStemPlot(finalGradeList)
 printStatistics(finalGradeList)
 print("Midterm Grade Plot")
