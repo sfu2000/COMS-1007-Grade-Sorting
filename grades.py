@@ -21,7 +21,7 @@ content = [[x.split()][0] for x in content]
 contentFloat = [[float(x) for x in y] for y in content]
 
 finalGradeList = [int((contentFloat[x][0]+contentFloat[x][1]+2*contentFloat[x][2])/400*100) for x in range(len(contentFloat))]
-midtermGradeList = [int(contentFloat[x][2]) for x in range(len(contentFloat))]
+midtermGradeList = sorted([int(contentFloat[x][2]) for x in range(len(contentFloat))], reverse=True)
 
 print("Final Grade Plot")
 printStemPlot(finalGradeList)
