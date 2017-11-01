@@ -29,23 +29,3 @@ printStatistics(finalGradeList)
 print("Midterm Grade Plot")
 printStemPlot(midtermGradeList)
 printStatistics(midtermGradeList)
-
-
-'''
-Mean: 70.1136363636
-Standard deviation: 12.102246052
-Final Grade Plot
-8 | 8 7 6 6 3 1 0 0 0 0 0 
-7 | 8 7 7 6 4 4 3 3 3 3 2 2 1 1 0 0 
-6 | 9 8 7 6 6 6 4 3 3 1 
-5 | 9 7 7 6 3 
-4 | 3 
-2 | 2 
-Midterm Grade Plot
-8 | 1 0 1 
-7 | 8 0 7 1 2 4 4 7 0 2 3 
-6 | 9 6 3 1 8 9 7 2 7 5 7 0 6 1 6 
-5 | 9 6 2 2 2 0 
-4 | 5 5 9 5 6 7 7 3 
-3 | 8 
-'''
