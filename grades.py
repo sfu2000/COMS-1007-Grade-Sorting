@@ -1,4 +1,5 @@
-def stemPlot(gradeList):
+import numpy as np
+def printStemPlot(gradeList):
     stem = 9
     for x in reversed(range(stem)):
         line = str(x) + ' | '
@@ -7,6 +8,9 @@ def stemPlot(gradeList):
                 line += str(grade)[1:] + " "
         if line != str(x) + " | ":
             print(line)
+def printStatistics(gradeList):
+    print("Mean: " + str(np.mean(gradeList)))
+    print("Standard deviation: " + str(np.std(gradeList)))
 
 with open("grades.txt") as f:
     content = f.readlines()
@@ -18,13 +22,14 @@ contentFloat = [[float(x) for x in y] for y in content]
 
 finalGradeList = [int((contentFloat[x][0]+contentFloat[x][1]+2*contentFloat[x][2])/400*100) for x in range(len(contentFloat))]
 midtermGradeList = [int(contentFloat[x][2]) for x in range(len(contentFloat))]
-import numpy as np
-print("Mean: "+str(np.mean(finalGradeList)))
-print("Standard deviation: "+str(np.std(finalGradeList)))
+
 print("Final Grade Plot")
-stemPlot(finalGradeList)
+printStemPlot(finalGradeList)
+printStatistics(finalGradeList)
 print("Midterm Grade Plot")
-stemPlot(midtermGradeList)
+printStemPlot(midtermGradeList)
+printStatistics(midtermGradeList)
+
 
 '''
 Mean: 70.1136363636
